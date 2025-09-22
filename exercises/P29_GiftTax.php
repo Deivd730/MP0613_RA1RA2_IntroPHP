@@ -7,6 +7,7 @@ class P29_GiftTax
         // Write your code here
         echo"Value of the gift?";
         $value = trim(fgets($GLOBALS['STDIN'] ?? STDIN));
+        // test commit
 
 
        
