@@ -19,7 +19,7 @@ final class P29_GiftTaxTest extends TestCase
         rewind($stdin);
 
         $this->mockStdin($stdin);
-
+        
         ob_start();
         $program = new P29_GiftTax();
         $program->main();

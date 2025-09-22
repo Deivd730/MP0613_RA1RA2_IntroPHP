@@ -5,44 +5,29 @@ class P22_GradesAndPoints
     public function main(): void
     {
         // Write your code here
-        
+
         // echo"Give points[0-100]:\n";        
-        
-        $point = trim(fgets($GLOBALS['STDIN'] ?? STDIN));
-        // echo"$point";
 
-        if((int)$point>100){
-            echo"Grade: incredible!\n";
-        } else if((int)$point <= 90 && (int)$point >= 100){
-            echo"Grade: 5\n";
+       echo "Give points\n";
 
-        } else if((int)$point <= 80 && (int)$point >= 89){
-            echo"Grade: 4\n";
+        $point = (int) trim(fgets($GLOBALS['STDIN'] ?? STDIN));
 
-        } else if((int)$point <= 70 && (int)$point >= 79){
-            echo"Grade: 3\n";
-
-        } else if((int)$point <= 60 && (int)$point >= 69){
-            echo"Grade: 2\n";
-
-        } else if((int)$point <= 50 && (int)$point >= 59){
-            echo"Grade: 1\n";
-
-        } else if((int)$point <= 0 && (int)$point >= 49){
-            echo"Grade: failed\n";
-
-        } else if((int)$point < 0){
-            echo"Grade: impossible!\n";
-            
+        if ($point < 0) {
+            echo "impossible!\n";
+        } elseif ($point <= 49) {
+            echo "failed\n";
+        } elseif ($point <= 59) {
+            echo "1\n";
+        } elseif ($point <= 69) {
+            echo "2\n";
+        } elseif ($point <= 79) {
+            echo "3\n";
+        } elseif ($point <= 89) {
+            echo "4\n";
+        } elseif ($point <= 100) {
+            echo "5\n";
+        } else {
+            echo "incredible!\n";
         }
-
-        // if((int)$point > 100){
-        //     echo"Grade: incredible!";
-            
-        // } else if((int)$point <= 90 && (int)$point >= 100){
-        //     echo"Grade: 5";
-
-        // }
-        
     }
 }
