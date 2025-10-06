@@ -17,6 +17,7 @@ final class P22_GradesAndPointsTest extends TestCase
         $stdin = fopen('php://memory', 'r+');
         fwrite($stdin, $input . "\n");
         rewind($stdin);
+        
 
         $this->mockStdin($stdin);
 
