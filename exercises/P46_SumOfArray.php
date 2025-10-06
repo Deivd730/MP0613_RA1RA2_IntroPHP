@@ -11,6 +11,13 @@ class P46_SumOfArray
     public function sumOfNumbersInArray(array $array): int
     {
         // Write your code here
-       
+
+        $sum = 0;
+
+        foreach ($array as $value) {
+            $sum += $value;
+        }
+
+        return $sum;
     }
 }
